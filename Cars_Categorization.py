@@ -48,7 +48,7 @@ print(df2)
 df2=df2.rename(columns={"": "cng"})
    
 
-df2.to_csv(r"C:\Users\dhaval.panchal\Pictures\car-classification-main\car-classification-main\cars_classification\Training_CSV_File/training_file.csv")
+df2.to_csv(r"C:\Users\dhaval.panchal\Pictures\car-classification-main\car-classification-main\cars_classification\Training_CSV_File/Training_Data.csv")
 
 conditions = [
     (dff['length'] < 4) & (dff['total_seats'] < 5),
@@ -61,7 +61,7 @@ dff['class'] = np.select(conditions, values)
 
 dff.head()
 
-df2=pd.read_csv(r"C:\Users\dhaval.panchal\Pictures\cars_categorization\Training_CSV_File/training_file.csv",encoding= 'unicode_escape')
+df2=pd.read_csv(r"C:\Users\dhaval.panchal\Pictures\cars_categorization\Training_CSV_File/Training_Data.csv",encoding= 'unicode_escape')
 
 y= df2['class']
 X=df2[df2.columns[3:]]
