@@ -1,40 +1,38 @@
 import pandas as pd
 import numpy as np
 
+df = pd.read_csv(r"C:\Users\dhaval.panchal\Pictures\cars_categorization\Training_CSV_File/training_file.csv",encoding= 'unicode_escape')
 
-df2=pd.read_csv(r"C:\Users\dhaval.panchal\Pictures\cars_categorization\Training_CSV_File/training_file.csv",encoding= 'unicode_escape')
+df.columns =[column.replace(" ", "_") for column in df.columns]
 
-df2.columns =[column.replace(" ", "_") for column in df2.columns]
-
-options =['petrol','cng','diesel','sunroof','climate_control']
+options =['climate_control','sunroof','petrol','cng','diesel']
 
 for i in range(len(options)):
     print(str(i+1) + ":", options[i])
 
-inp = int(input("Enter your choice pecification: "))
-if inp in range(1, 7):
-    inp = options[inp-1]
-    if inp=='petrol':
-        df2.query("petrol == True", inplace = True)
-        newaa=df2["car_model"]
-        print(f'{newaa}')
-    if inp=='cng':
-        df2.query("cng == True", inplace = True)
-        newaa=df2["car_model"]
-        print(f'{newaa}')
-    if inp=='diesel':
-        df2.query("diesel == True", inplace = True)
-        newaa=df2["car_model"]
-        print(f'{newaa}')
-    if inp=='sunroof':
-        df2.query("roof == True", inplace = True)
-        newaa=df2["car_model"]
-        print(f'{newaa}')
-    if inp=='climate_control':
-        df2.query("climate_control == True", inplace = True)
-        newaa=df2["car_model"]
-        print(f'{newaa}')
-
+opt = int(input("Choose from the below options: "))
+if opt in range(1, 7):
+    opt = options[inp-1]
+    if opt=='sunroof':
+        df.query("roof == True", inplace = True)
+        feature=df["car_model"]
+        print(f'{feature}')
+    if opt=='climate_control':
+        df.query("climate_control == True", inplace = True)
+        feature=df["car_model"]
+        print(f'{feature}')
+    if opt=='petrol':
+        df.query("petrol == True", inplace = True)
+        feature=df["car_model"]
+        print(f'{feature}')
+    if opt=='cng':
+        df.query("cng == True", inplace = True)
+        feature=df["car_model"]
+        print(f'{feature}')
+    if opt=='diesel':
+        df.query("diesel == True", inplace = True)
+        feature=df["car_model"]
+        print(f'{feature}')
 
 else:
-    print("Invalid input!")
+    print("Choose from the above mentioned option")
