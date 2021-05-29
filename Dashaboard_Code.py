@@ -13,7 +13,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
 
-df = pd.read_csv(r"C:\Users\dhaval.panchal\Pictures\cars_categorization\Training_CSV_File/training_file.csv",encoding= 'unicode_escape')
+df = pd.read_csv(r"C:\Users\dhaval.panchal\Pictures\cars_categorization\Training_CSV_File/Training_Data.csv",encoding= 'unicode_escape')
 
 df.columns = [column.replace(" ", "_") for column in df.columns]
 
