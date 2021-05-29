@@ -41,13 +41,12 @@ s  = dff['functionality'].str.replace("'",'').str.split(',').explode().to_frame(
 
 cols = s['functionality'].drop_duplicates(keep='first').tolist()
 
-df2 = pd.concat([dff, pd.crosstab(s.index, s["functionality"])[cols]], axis=1).replace(
+df = pd.concat([dff, pd.crosstab(s.index, s["functionality"])[cols]], axis=1).replace(
     {1: True, 0: False}
 )
-print(df2)
-df2=df2.rename(columns={"": "cng"})
+print(df)
+df2 = df.rename(columns={"": "cng"})
    
-
 df2.to_csv(r"C:\Users\dhaval.panchal\Pictures\car-classification-main\car-classification-main\cars_classification\Training_CSV_File/Training_Data.csv")
 
 conditions = [
