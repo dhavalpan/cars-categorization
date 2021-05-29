@@ -2,17 +2,12 @@
 
 This claasification is based on Sub four meter/ lenth of the car.
 
-Sub four meter is 4000 mm range.
-if the car length is more than 4000mm, the cost will be higher so
-it will not suitable for poor or small family.
+Sub four meter is 4000.
+if the car length is more than 4000, the cost will be higher so it won't be suitable for small/poor family.
 
-if the Sub four meter/ car length is less than 4000 mm,
-the car price will be lower and it has 5 seater capacity,
-so it is suitable for small family.
+if the Sub four meter/ car length is less than 4000 then the car price will be lower and it will be having 5 seater capacity so it is suitable for small family.
 
-so we have created here two claases in claasification, one is for the 
-car length more than 4000mm and seating capacity more than5.
- anotherr claass is car length less than 4000 mm and car capacity 5 or less.
+so created two claases in claasification
 
 ###Accuracy Score###
 
