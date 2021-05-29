@@ -55,4 +55,4 @@ def update_output(value):
     return 'You have selected "{}"'.format(value)
 
 if __name__ == '__main__':
-    app.run_server(debug=True, use_reloader=False) 
+    app.run_server(host='172.28.11.251',port='49766',debug=True, use_reloader=False) 
