@@ -138,3 +138,4 @@ for i in lisysn:
     del all_pic1
 
 
+allcombined.to_csv(r"C:\Users\dhaval.panchal\Pictures\cars_categorization\Specifications_Cars.csv")
