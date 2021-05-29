@@ -13,24 +13,24 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
 
-df2=pd.read_csv(r"C:\Users\dhaval.panchal\Pictures\cars_categorization\Training_CSV_File/training_file.csv",encoding= 'unicode_escape')
+df = pd.read_csv(r"C:\Users\dhaval.panchal\Pictures\cars_categorization\Training_CSV_File/training_file.csv",encoding= 'unicode_escape')
 
-df2.columns =[column.replace(" ", "_") for column in df2.columns]
+df.columns = [column.replace(" ", "_") for column in df.columns]
 
-df2.query("petrol == True", inplace = True)
-petrol=df2["car_model"]
+df.query("climate_control == True", inplace = True)
+climate_control = df["car_model"]
 
-df2.query("cng == True", inplace = True)
-cng=df2["car_model"]
+df.query("roof == True", inplace = True)
+sunroof = df["car_model"]
 
-df2.query("diesel == True", inplace = True)
-diesel=df2["car_model"]
+df.query("petrol == True", inplace = True)
+petrol = df["car_model"]
 
-df2.query("roof == True", inplace = True)
-sunroof=df2["car_model"]
+df.query("cng == True", inplace = True)
+cng = df["car_model"]
 
-df2.query("climate_control == True", inplace = True)
-climate_control=df2["car_model"]
+df.query("diesel == True", inplace = True)
+diesel = df["car_model"]
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 app.layout = html.Div([
@@ -55,4 +55,4 @@ def update_output(value):
     return 'You have selected "{}"'.format(value)
 
 if __name__ == '__main__':
-    app.run_server(host='172.28.11.251',debug=True, use_reloader=False) 
+    app.run_server(debug=True, use_reloader=False) 
