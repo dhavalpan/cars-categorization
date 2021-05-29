@@ -25,7 +25,8 @@ from sklearn.model_selection import KFold, cross_val_score, train_test_split
 import pickle
 import joblib
 
-filename =r'C:\Users\dhaval.panchal\Pictures\cars_categorization\final.csv'
+filename = r'C:\Users\dhaval.panchal\Pictures\cars_categorization\final.csv'
+
 dff = pd.read_csv(filename, encoding= 'unicode_escape')
 dff.rename(columns={"": "cng"})
 dff['class']='0'
